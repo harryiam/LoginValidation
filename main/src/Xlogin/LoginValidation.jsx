@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from "./LoginValidation.module.css"
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -30,9 +31,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h1>Login Page</h1>
-      <form onSubmit={handleSubmit}>
+    <>
+    <div className={styles.entire}>
+        <div><h1>Login Page</h1></div>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <div>
           <label>Username</label>
           <input
@@ -52,9 +54,10 @@ const LoginPage = () => {
         <div>
           <button type="submit">Login</button>
         </div>
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage && <p className={styles.para}>{errorMessage}</p>}
       </form>
     </div>
+    </>
   );
 };
 
