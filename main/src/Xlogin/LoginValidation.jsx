@@ -22,7 +22,7 @@ const LoginPage = () => {
     }
 
     if (username === 'user' && password === 'password') {
-      setErrorMessage('');
+      setErrorMessage('Welcome, user!');
       // Here you would handle successful login, like redirecting to another page
     } else {
       setErrorMessage('Invalid username or password.');
